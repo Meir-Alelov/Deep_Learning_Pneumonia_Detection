@@ -1,10 +1,14 @@
-# Title
+# Deep Learning Pneumonia Detection
 
-**Authors**: Student1, Student2
+**Authors**: Meir Alelov, Greg Burgess
+
+![UNICEF pneumonia mortality](images/UNICEF_mortality_percentages.png)
 
 ## Overview
 
 A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
+
+
 
 ## Business Problem
 
@@ -16,6 +20,12 @@ Questions to consider:
 * How did you pick the data analysis question(s) that you did?
 * Why are these questions important from a business perspective?
 ***
+
+- Worldwide, over 800,000 children under five die every year from pneumonia [source](https://data.unicef.org/topic/child-health/pneumonia/)
+- Mortality rates are especially high in regions affected by poverty and inadequate access to health care.
+- These low-resource settings are less likely to have access to rapid radiological interpretation of images, which could result in a delay of care and poorer prognosis [source](https://www.cell.com/cell/fulltext/S0092-8674(18)30154-5)
+
+
 
 ## Data
 
@@ -64,6 +74,14 @@ Questions to consider:
 * What are some reasons why your analysis might not fully solve the business problem?
 * What else could you do in the future to improve this project?
 ***
+
+
+Future steps:
+- Utilize additional imaging modalities (e.g., MR and CT)
+- Additional acquisition types (slice planes)
+- Use NLP to incorporate information from H&P
+- Distinguish viral pneumonia from bacterial pneumonia, because they require different courses of care
+
 
 ## For More Information
 
