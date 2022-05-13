@@ -27,6 +27,8 @@ Patients were aged between one and five years old. Our training set included 387
 
 Pneumonia is indicated by abnormal opacification in the x-ray image, compared to clearly visible vascular features in normal x-rays.
 
+![chest_x_ray](images/training_images_orig.jpg)
+
 ### Data Preparation
 
 First, we downloaded data from Kaggle and unzipped into data directory. We chose not to use the images in the val directory, because that data only had 8 normal and 8 pneumonia images. Because of that, we intend to create our own validation set with a larger number of images.
@@ -34,6 +36,8 @@ First, we downloaded data from Kaggle and unzipped into data directory. We chose
 We used ImageDataGenerator module in tensorflow to genreate batches of vectorized image data. Because we dropped the val directory, however, we created a new validation set using the validation_split option. 
 
 Uniform image size was set to 128x128. We later use ImageDataGenerator to augment our training data set, by manipulating the original training images to provide additional training images after various manipulation techniques (shear, scale, shift, etc.). This was done in an attempt to make poorer quality training data so that the model would generalize to unseen data better.
+
+![chest_x_ray](images/training_images_augmented.jpg)
 
 ## Methods
 
@@ -68,20 +72,30 @@ Perhaps the images in the test set were more dissimilar from the train set than 
 
 Turns out the average cv score was 93.5%, so the first stipulation is false, and we can assume that augmenting the data will solve this issue. The first simple model with augmented data had val_accuracy of 81.4%, val_recall of 90.9%, and val_precision of 85.1%. This is a significant improvement, so we decided to use only augmented data from this point on. 
 
+![training_performance_first_simple_model_aug](training_performance_first_simple_model_aug.jpg)
+
 Now that that's out of the way, our first multilayer model had 3 hidden layers, all of which used relu as an activation function, as well as L2 (ridge) regularization. This model scored as follows: val_accuracy: 79.6%, val_recall: 95.1%, val_precision: 80.8%.
 
 At this point, we want to maximize all these scores, so a convolutional neural net will allow for more complexity, potentially training the model better. 
 
 Our first attempt at a CNN model included the same dense layers (with same regularization), same optimizer, but included 2 sets of Conv2D/MaxPooling2D layers before the hidden layers. This model scored as follows: val_accuracy: 92.8%, val_recall: 94.2%, val_precision: 96.1%. Accuracy and precision increased significantly, so we're on the right track. 
 
-As a final attempt to reduce overfitting, we decided to take the above model and simply add dropout layers for more regularization. This final model scored as follows: val_accuracy: 91.4%, val_recall: 92.9%, val_precision: 95.4%. The metrics suffer slightly, however this model tested better on unseen data than did the previous model. The final model has scores of: accuracy: 88.3%, recall: 94.4%, precision: 87.8%.
+![cnn_update](images/training_performance_deep_cnn.jpg)
 
-### Visual 1
-![graph1](./images/viz1.png)
+
+As a final attempt to reduce overfitting, we decided to take the above model and simply add dropout layers for more regularization. This final model scored as follows: val_accuracy: 91.4%, val_recall: 92.9%, val_precision: 95.4%. The metrics suffer slightly, however this model tested better on unseen data than did the previous model. This final model has scores of: accuracy: 88.3%, recall: 94.4%, precision: 87.8%.
+
+![cnn_update](images/training_performance_deep_cnn_updated_v2.jpg)
+
+![cnn_metrics](images/download.png)
+
+![cnn_metrics](images/download-1.png)
 
 ## Conclusions
 
 Ultimately, our best neural network was a convolutional neural network with multiple hidden layers. This network has an overall accuracy of 89.1% for classifying unseen images as pneumonia versus normal. 
+
+![model_eval](images/model_evaluation_trans.png)
 
 We had two major concerns within this medical context. 
 
