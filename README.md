@@ -112,13 +112,6 @@ If provided the opportunity to continue working on this project, we have plans t
 - Use NLP to incorporate information from H&P
 - Distinguish viral pneumonia from bacterial pneumonia, because they require different courses of care
 
-
-## For More Information
-
-Please review our full analysis in [our Jupyter Notebook](./Users/meiralelov/Documents/Flatiron/Projects/Deep_Learning_Pneumonia_Detection/Deep_Learning_Pneumonia_Detection.ipynb) or our [presentation](./Users/meiralelov/Documents/Flatiron/Projects/Deep_Learning_Pneumonia_Detection/Presentation.pdf).
-
-For any additional questions, please contact **name & email, name & email**
-
 ## Repository Structure
 
 Describe the structure of your repository and its contents, for example:
