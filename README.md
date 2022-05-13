@@ -115,7 +115,7 @@ If provided the opportunity to continue working on this project, we have plans t
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./Users/meiralelov/Documents/Flatiron/Projects/Deep_Learning_Pneumonia_Detection/Deep_Learning_Pneumonia_Detection.ipynb) or our [presentation](./Users/meiralelov/Documents/Flatiron/Projects/Deep_Learning_Pneumonia_Detection/Presentation.pdf).
 
 For any additional questions, please contact **name & email, name & email**
 
