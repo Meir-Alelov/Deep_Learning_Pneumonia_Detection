@@ -72,7 +72,7 @@ Perhaps the images in the test set were more dissimilar from the train set than 
 
 Turns out the average cv score was 93.5%, so the first stipulation is false, and we can assume that augmenting the data will solve this issue. The first simple model with augmented data had val_accuracy of 81.4%, val_recall of 90.9%, and val_precision of 85.1%. This is a significant improvement, so we decided to use only augmented data from this point on. 
 
-![training_performance_first_simple_model_aug](training_performance_first_simple_model_aug.jpg)
+![fsm_aug](images/training_performance_first_simple_model_aug.jpg)
 
 Now that that's out of the way, our first multilayer model had 3 hidden layers, all of which used relu as an activation function, as well as L2 (ridge) regularization. This model scored as follows: val_accuracy: 79.6%, val_recall: 95.1%, val_precision: 80.8%.
 
@@ -87,9 +87,9 @@ As a final attempt to reduce overfitting, we decided to take the above model and
 
 ![cnn_update](images/training_performance_deep_cnn_updated_v2.jpg)
 
-![cnn_metrics](images/download.png)
+![cnn_metrics](images/deep_cnn_confusion_matrix.jpg)
 
-![cnn_metrics](images/download-1.png)
+![cnn_metrics](images/deep_cnn_roc.jpg)
 
 ## Conclusions
 
