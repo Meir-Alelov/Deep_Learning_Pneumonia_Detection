@@ -150,9 +150,9 @@ Describe the structure of your repository and its contents, for example:
 ├── Deep_Learning_Pneumonia_Detection.ipynb	<- Narrative documentation of analysis in Jupyter notebook
 ├── Presentation.pdf				<- PDF version of project presentation
 ├── notebooks					<- versions of working notebooks
-│   ├── greg_working_notebook.ipynb		<- jupyter notebook with initial simple models
-│   ├── greg_working_notebook_multilayer.ipynb	<- jupyter notebook with multilayer models
-│   ├── greg_working_notebook_cnn.ipynb		<- jupyter notebook with convolutional neural networks
+│   ├── meir_working_notebook.ipynb		<- jupyter notebook with initial simple models
+│   ├── meir_working_notebook_multilayer.ipynb	<- jupyter notebook with multilayer models
+│   ├── meir_working_notebook_cnn.ipynb		<- jupyter notebook with convolutional neural networks
 │   └── meir_working_notebook.ipynb		<- jupyter notebook with cross-validation and plotting functions
 ├── data                                	<- Contains saved models (.h5) and model.history (.csv)
 └── images                              	<- Both sourced externally and generated from code
